@@ -7,7 +7,7 @@
 #' @return result
 #'
 #' @importFrom httr GET content
-#' @importFrom logger
+#' @importFrom logger log_info
 #'
 usd_rate <- function(value, input = 'EUR', output='USD') {
   base <- GET(paste0('https://api.exchangeratesapi.io/latest?base=', input, '&symbols=', output))

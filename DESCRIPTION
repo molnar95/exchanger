@@ -8,5 +8,5 @@ Description: exchange currency
 License: GPL2
 Encoding: UTF-8
 LazyData: true
-Depends: httr, logger
+Imports: httr, logger
 RoxygenNote: 7.1.0
