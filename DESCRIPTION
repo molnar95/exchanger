@@ -9,4 +9,5 @@ License: GPL2
 Encoding: UTF-8
 LazyData: true
 Imports: httr, logger
+Depends: httr, logger
 RoxygenNote: 7.1.0
