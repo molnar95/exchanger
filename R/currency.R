@@ -8,6 +8,7 @@
 #'
 #' @importFrom httr GET content
 #' @importFrom logger log_info
+#' @export
 #'
 usd_rate <- function(value, input = 'EUR', output='USD') {
   base <- GET(paste0('https://api.exchangeratesapi.io/latest?base=', input, '&symbols=', output))
@@ -24,6 +25,7 @@ usd_rate <- function(value, input = 'EUR', output='USD') {
 #' @return value_eur numeric value
 #'
 #' @importFrom httr GET content
+#' @export
 #'
 convert_to_eur <- function(val){
   value_eur <- usd_rate(val)
@@ -36,6 +38,7 @@ convert_to_eur <- function(val){
 #' @param value numeric vector
 #'
 #' @return EUR character string
+#' @export
 #'
 eur <- function(value){
   return(paste0('€', format(round(value, 2), nsmall=1, big.mark=",")))
@@ -46,6 +49,7 @@ eur <- function(value){
 #' @param str character string
 #'
 #' @return EUR in numeric format
+#' @export
 #'
 uneur <- function(str){
   str <- gsub('€', '', str)
@@ -53,4 +57,6 @@ uneur <- function(str){
   return(as.numeric(str))
 }
 
+library(devtools)
 
+use_testthat()

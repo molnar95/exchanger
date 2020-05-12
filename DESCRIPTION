@@ -11,3 +11,5 @@ LazyData: true
 Imports: httr, logger
 Depends: httr, logger
 RoxygenNote: 7.1.0
+Suggests: 
+    testthat
